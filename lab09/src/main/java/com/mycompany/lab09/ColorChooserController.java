@@ -16,7 +16,7 @@ import javafx.scene.shape.Rectangle;
  *
  * @author 2588731
  */
-public class ColorChooserController  {
+public class ColorChooserController implements Initializable {
 
     @FXML
     private Slider redSlider;
@@ -45,7 +45,8 @@ public class ColorChooserController  {
     /**
      * Initializes the controller class.
      */
-    public void initialize() {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
         redTextField.textProperty().bind(redSlider.valueProperty().asString("%.0f"));
         greenTextField.textProperty().bind(greenSlider.valueProperty().asString("%.0f"));
         blueTextField.textProperty().bind(blueSlider.valueProperty().asString("%.0f"));
